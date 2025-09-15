@@ -133,10 +133,15 @@ body {
 .top-navigation .trigram {
   text-decoration: none;
   color: #737373;
+  transition: 0.2s ease-in-out;
 }
 
 .top-navigation ul li a.active {
-  color: #434343;
+  color: #737373;
+}
+
+.top-navigation ul li a:hover {
+    color: #434343;
 }
 
 /* PORTFOLIO SECTION */
@@ -305,6 +310,11 @@ body {
   justify-content: center;
   border-radius: 50%;
   font-size: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.teammate-social-icons > div:hover {
+    background: #545454;
 }
 
 footer {
@@ -340,6 +350,23 @@ footer .social-icons .icon {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+footer .social-icons .icon:hover {
+    background-color: #ffffff;
+}
+
+footer .social-icons .icon:hover footer .social-icons span {
+  color: #ffffff;
+}
+
+footer .social-icons span {
+  transition: 0.2s ease-in-out;
+}
+
+footer .social-icons span:hover {
+  color: #ffffff;
 }
 
 .footer-content {
@@ -398,6 +425,8 @@ footer .social-icons .icon {
   border-top: 1px solid #2e2e2e;
   padding-top: 30px;
 }
+
+
   /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
 }
 
@@ -445,6 +474,7 @@ body {
 .content p.subtext {
   line-height: 24px;
   padding: 0;
+  width: 100%;
 }
 
 .content h1 {
@@ -779,11 +809,13 @@ footer .social-icons .icon + span {
 }
 
 .footer-contacts .address {
-    flex: 1 1 45%;
+    /* flex: 1 1 45%; */
+    margin-left: 8vw;
 }
 
 .footer-contacts .email {
-    flex: 1 1 45%;
+    /* flex: 1 1 45%; */
+    margin-right: 8vw;
 }
 
 .footer-contacts .phones {
@@ -832,3 +864,67 @@ footer .social-icons .icon + span {
 
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
+
+@media (max-width: 642px) {
+      body {
+        background: #fff
+      }
+
+
+    .teammate {
+    min-width: calc(25% - 11.25px);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid grey;
+}
+
+.portfolio-item {
+  flex-direction: column;
+}
+
+.portfolio-item-info {
+  text-align: center;
+}
+
+.teammate-info {
+  align-items: flex-start;
+}
+
+.teammate-social-icons {
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 5%;
+}
+
+.teammate-img-wrapper {
+  width: 34%;
+  height: 100%;
+  display: flex;
+}
+
+.teammate-img-wrapper img {
+  width: 100%;
+}
+
+.teammate-data, .teammate-img-wrapper img {
+  margin: 10px;
+}
+
+footer .social-icons {
+  flex-direction: column; 
+}
+
+
+footer .social-icons .icon + span {
+  display: block;
+}
+
+.footer-contacts {
+  justify-content: center;
+}
+
+.footer-contacts .address, .footer-contacts .email {
+  margin-left: 0;
+}
+}
