@@ -353,21 +353,19 @@ footer .social-icons .icon {
   transition: background-color 0.2s ease-in-out;
 }
 
-footer .social-icons .icon:hover {
+/* footer .social-icons .icon:hover {
     background-color: #ffffff;
 }
 
 footer .social-icons .icon:hover footer .social-icons span {
   color: #ffffff;
-}
+} */
 
-footer .social-icons span {
-  transition: 0.2s ease-in-out;
-}
 
-footer .social-icons span:hover {
+
+/* footer .social-icons span:hover {
   color: #ffffff;
-}
+} */
 
 .footer-content {
   gap: 80px;
@@ -426,8 +424,22 @@ footer .social-icons span:hover {
   padding-top: 30px;
 }
 
+.social-icons > div {
+  transition: all 0.2s ease-in-out;
+}
 
-  /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+.social-icons > div span {
+  transition: 0.2s ease-in-out;
+}
+
+.social-icons > div:hover .icon {
+  background-color: #fff;
+}
+
+.social-icons > div:hover span {
+  color: #ffffff;
+}
+
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
@@ -865,7 +877,7 @@ footer .social-icons .icon + span {
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
 
-@media (max-width: 642px) {
+@media (max-width: 767px) {
       body {
         background: #fff
       }
