@@ -1,4 +1,5 @@
 @media (min-width: 1024px) {
+
   .top-navigation .trigram {
     display: none;
   }
@@ -135,7 +136,8 @@
   }
 
   .top-navigation ul li a:hover {
-    color: #434343;
+    color: #393939;
+    border-bottom: #393939 2px solid;
   }
 
   /* PORTFOLIO SECTION */
@@ -157,6 +159,11 @@
     gap: 20px;
   }
 
+  .portfolio-item:hover .portfolio-img-wrapper img {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgb(76, 76, 76);
+  }
+
   .portfolio-img-wrapper {
     display: flex;
     align-items: center;
@@ -166,6 +173,8 @@
 
   .portfolio-img-wrapper img {
     width: 100%;
+    box-shadow: 0 0 0px rgb(76, 76, 76);
+    transition: 0.2s ease-in-out;
   }
 
   .portfolio-item-info {
@@ -258,6 +267,10 @@
     gap: 10px;
   }
 
+  .teammate:hover .teammate-img-wrapper img {
+    transform: scale(1.35);
+  }
+
   .teammate-img-wrapper {
     width: 160px;
     overflow: hidden;
@@ -266,6 +279,7 @@
   .teammate-img-wrapper img {
     object-fit: cover;
     width: 100%;
+    transition: 0.35s ease-in-out;
   }
 
   .teammate-data {
@@ -344,7 +358,7 @@
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    transition: background-color 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .footer-content {
@@ -410,15 +424,16 @@
   }
 
   .social-icons > div {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 
   .social-icons > div span {
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
   }
 
   .social-icons > div:hover .icon {
-    background-color: #fff;
+    background-color: #ffffff;
+    transform: scale(1.1);
   }
 
   .social-icons > div:hover span {
@@ -915,6 +930,6 @@
 
   .footer-contacts .address,
   .footer-contacts .email {
-    margin-left: 0;
+    margin: 0;
   }
 }
